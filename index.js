@@ -42,13 +42,20 @@ const run = async () => {
         break;
     }
     // Check if glass is on table or not
-    if (!table.isPositionValid(glass.position));
+    if (!table.isPositionValid(glass.position)) {
+      glass.position.x = -1;
+      glass.position.y = -1;
+      output();
+    }
   });
 };
 
 function output() {
-  // Write to stdout.
+  // Write to stdout. Format the output in an array.
+  let response = "[" + glass.position.x + ", " + glass.position.y + "]";
 
+  process.stdout.write(response);
   process.exit();
 }
+
 run();
