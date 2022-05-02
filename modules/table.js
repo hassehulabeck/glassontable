@@ -11,9 +11,9 @@ module.exports = {
       position.y < 0 ||
       position.y >= this.size.height
     ) {
-      return "Nope. Fell of the table";
+      return false;
     } else {
-      return "POS: " + position.x + ", " + position.y;
+      return true;
     }
   },
 };

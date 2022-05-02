@@ -19,5 +19,8 @@ module.exports = {
         this.data.splice(index, 1);
       }
     });
+
+    // Add a final zero if not present
+    if (this.data[this.data.length - 1] != 0) this.data.push(0);
   },
 };

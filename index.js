@@ -16,8 +16,8 @@ const run = async () => {
   table.size.height = inputValues.tableHeight;
 
   // Place glass on table
-  glass.position.x = inputValues.positionX;
-  glass.position.y = inputValues.positionY;
+  glass.position.x = Number(inputValues.positionX);
+  glass.position.y = Number(inputValues.positionY);
 
   // Loop through commands, move and turn the glass.
   commands.data.forEach((command) => {
@@ -41,13 +41,14 @@ const run = async () => {
         output();
         break;
     }
-
-    let result = table.isPositionValid(glass.position);
-    console.log("RES: " + result);
+    // Check if glass is on table or not
+    if (!table.isPositionValid(glass.position));
   });
 };
 
 function output() {
-  console.log("Slut");
+  // Write to stdout.
+
+  process.exit();
 }
 run();
