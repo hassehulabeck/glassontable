@@ -32,7 +32,7 @@ module.exports = {
         type: "input",
         message: "Enter x position for glass:",
         validate: function (value) {
-          if (value.length && value > 0) {
+          if (value.length && value >= 0) {
             return true;
           } else {
             return "Enter x position for glass:";
@@ -44,10 +44,22 @@ module.exports = {
         type: "input",
         message: "Enter y position for glass:",
         validate: function (value) {
-          if (value.length && value > 0) {
+          if (value.length && value >= 0) {
             return true;
           } else {
             return "Enter x position for glass:";
+          }
+        },
+      },
+      {
+        name: "commands",
+        type: "input",
+        message: "Enter a comma-separated list of commands. End with 0:",
+        validate: function (value) {
+          if (value.length) {
+            return true;
+          } else {
+            return "Enter a comma-separated list of commands:";
           }
         },
       },
