@@ -1,13 +1,19 @@
 module.exports = {
   data: null,
-  validCommands: [
-    // Could/Should be expanded to include objects with number and definition.
-    0, 1, 2, 3, 4,
-  ],
-  convert: (string) => {
-    this.data = string.split(",");
+  validCommands: [0, 1, 2, 3, 4],
+  convert: function (string) {
+    /* 
+      1.Split string to array,
+      2. Cast as number
+      3. Filter out anything not numerical
+      */
+    this.data = string
+      .split(",")
+      .map(Number)
+      .filter((x) => !isNaN(x));
   },
-  analyze: () => {
+  clean: function () {
+    // Remove any numbers that isn't a valid command.
     this.data.forEach((value, index) => {
       if (!this.validCommands.includes(value)) {
         this.data.splice(index, 1);

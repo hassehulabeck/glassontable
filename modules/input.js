@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+// Node package "inquirer" reads from process.stdin. Can be set in packages/core/index.js #35.
 
 module.exports = {
   initalize: () => {

@@ -3,11 +3,9 @@ const commands = require("./modules/commands");
 
 const run = async () => {
   const inputValues = await input.initalize();
-  // Convert commands to array.
-  console.log(inputValues);
+  // Convert and clean commands to array.
   commands.convert(inputValues.commands);
-  commands.analyze();
-  console.log(commands.data);
+  commands.clean();
 };
 
 run();
