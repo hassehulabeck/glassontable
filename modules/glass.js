@@ -1,7 +1,7 @@
 module.exports = {
   position: {
-    x: null,
-    y: null,
+    x: 0,
+    y: 0,
   },
   directions: [
     {
@@ -40,12 +40,10 @@ module.exports = {
   },
   move: function (movement) {
     /*
-    In short, in directions you lookup the adjustment of the position by,
+    In short, in directions you look up the adjustment of the position by,
     the right direction (0-4 i.e N-E-S-W), then movement(backwards, forward) and 0 for x and 1 for y.
     */
-    this.position.x =
-      this.position.x + this.directions[this.direction][movement][0];
-    this.position.y =
-      this.position.y + this.directions[this.direction][movement][1];
+    this.position.x += this.directions[this.direction][movement][0];
+    this.position.y += this.directions[this.direction][movement][1];
   },
 };

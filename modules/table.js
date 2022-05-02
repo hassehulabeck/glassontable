@@ -13,7 +13,7 @@ module.exports = {
     ) {
       return "Nope. Fell of the table";
     } else {
-      return position.x + ", " + position.y;
+      return "POS: " + position.x + ", " + position.y;
     }
   },
 };

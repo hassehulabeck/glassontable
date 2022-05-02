@@ -43,7 +43,7 @@ const run = async () => {
     }
 
     let result = table.isPositionValid(glass.position);
-    console.log(result);
+    console.log("RES: " + result);
   });
 };
 
