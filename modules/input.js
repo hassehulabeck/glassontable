@@ -8,12 +8,12 @@ module.exports = {
         name: "allInfo",
         type: "input",
         message:
-          "For a table (3x3) and a glass placed at (1,1), and then some commands ending with exit (0), enter a string like this 3,3,1,1,4,2,3,3,1,0 :",
+          "For a table (3x3) and a glass placed at (1,1), and some commands (0-4), input 3,3,1,1,4,2,3,3,1,0 :",
         validate: function (value) {
           if (value.length) {
             return true;
           } else {
-            return "Enter a string containing at least four values, like this (3,3,1,1,4,2,3,3,1,0):";
+            return "Enter a string containing at least four values, like this (3,3,1,1):";
           }
         },
       },

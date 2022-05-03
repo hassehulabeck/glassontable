@@ -8,18 +8,10 @@ const run = async () => {
   const singleLineInput = await input.initalize();
 
   // Extract input into table, glass and commands. Put the "rest" in commands.
-  let commands = divideInput(singleLineInput);
+  let commandInput = divideInput(singleLineInput.allInfo);
 
   // Filter and clean string of commands.
-  commands.clean(commands);
-
-  // Set table size
-  table.size.width = inputValues.tableWidth;
-  table.size.height = inputValues.tableHeight;
-
-  // Place glass on table
-  glass.position.x = Number(inputValues.positionX);
-  glass.position.y = Number(inputValues.positionY);
+  commands.clean(commandInput);
 
   // Loop through commands, move and turn the glass.
   commands.data.forEach((command) => {
@@ -52,8 +44,8 @@ const run = async () => {
   });
 };
 
-function divideInput(string) {
-  let data = string
+function divideInput(input) {
+  let data = input
     .split(",")
     .map(Number)
     .filter((x) => !isNaN(x));
@@ -62,11 +54,11 @@ function divideInput(string) {
     // If input is missing, auto-simulate a small table - or a big glass...
     data = [3, 3, 1, 1];
   } else {
-    table.size.width = data.shift();
-    table.size.height = data.shift();
+    table.size.width = Number(data.shift());
+    table.size.height = Number(data.shift());
 
-    glass.position.x = data.shift();
-    glass.position.y = data.shift();
+    glass.position.x = Number(data.shift());
+    glass.position.y = Number(data.shift());
   }
 
   return data;

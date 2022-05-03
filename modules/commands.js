@@ -1,9 +1,9 @@
 module.exports = {
   data: null,
   validCommands: [0, 1, 2, 3, 4],
-  clean: function (commands) {
+  clean: function (input) {
     //  Filter out anything not numerical
-    this.data = commands.filter((x) => !isNaN(x));
+    this.data = input.filter((x) => !isNaN(x));
 
     // Remove any numbers that isn't a valid command.
     this.data.forEach((value, index) => {
