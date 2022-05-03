@@ -8,12 +8,12 @@ I would suggest clone or download, then `npm install` and `node index.js` to run
 
 ## Instructions
 
-There are two branches of this CLI (_main_ and _singleInput_).
-If you run from main, you will be asked five questions (Height and width of the table, position of the glass expressed as x and y, and finally the commands you would like to use on the glass. These should be entered as a comma-separated string ending with a zero, like this
+There are two branches of this CLI (**main** and **singleInput**).
+If you run from **main**, you will be asked five questions (Height and width of the table, position of the glass expressed as x and y, and finally the commands you would like to use on the glass. These should be entered as a comma-separated string ending with a zero, like this
 
 `4,3,1,2,1,1,0`
 
-If you run the program from the _singleInput_ branch, you will only be asked one question. If you would like a 3x3-table, a glass placed in the middle and then move it to the right, you should enter:
+If you run the program from the **singleInput** branch, you will only be asked one question. If you would like a 3x3-table, a glass placed in the middle and then move it to the right, you should enter:
 
 `3,3,1,1,3,1,0`
 
