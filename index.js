@@ -5,11 +5,13 @@ const glass = require("./modules/glass");
 
 const run = async () => {
   // Get input
-  const inputValues = await input.initalize();
+  const singleLineInput = await input.initalize();
 
-  // Convert and clean string of commands.
-  commands.convert(inputValues.commands);
-  commands.clean();
+  // Extract input into table, glass and commands. Put the "rest" in commands.
+  let commands = divideInput(singleLineInput);
+
+  // Filter and clean string of commands.
+  commands.clean(commands);
 
   // Set table size
   table.size.width = inputValues.tableWidth;
@@ -49,6 +51,26 @@ const run = async () => {
     }
   });
 };
+
+function divideInput(string) {
+  let data = string
+    .split(",")
+    .map(Number)
+    .filter((x) => !isNaN(x));
+
+  if (data.length < 4) {
+    // If input is missing, auto-simulate a small table - or a big glass...
+    data = [3, 3, 1, 1];
+  } else {
+    table.size.width = data.shift();
+    table.size.height = data.shift();
+
+    glass.position.x = data.shift();
+    glass.position.y = data.shift();
+  }
+
+  return data;
+}
 
 function output() {
   // Write to stdout. Format the output in an array.

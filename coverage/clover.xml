@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1651563051896" clover="3.2.0">
-  <project timestamp="1651563051896" name="All files">
-    <metrics statements="19" coveredstatements="19" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7" elements="40" coveredelements="40" complexity="0" loc="19" ncloc="19" packages="1" files="3" classes="3"/>
+<coverage generated="1651567530288" clover="3.2.0">
+  <project timestamp="1651567530288" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="14" coveredconditionals="14" methods="6" coveredmethods="6" elements="38" coveredelements="38" complexity="0" loc="18" ncloc="18" packages="1" files="3" classes="3"/>
     <file name="commands.js" path="C:\Users\hansb\jvstn\glassontable\modules\commands.js">
-      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="10" count="2" type="stmt"/>
-      <line num="13" count="12" type="stmt"/>
-      <line num="17" count="2" type="stmt"/>
-      <line num="18" count="7" type="cond" truecount="2" falsecount="0"/>
-      <line num="19" count="1" type="stmt"/>
-      <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="15" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="16" count="3" type="cond" truecount="2" falsecount="0"/>
     </file>
     <file name="glass.js" path="C:\Users\hansb\jvstn\glassontable\modules\glass.js">
       <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
