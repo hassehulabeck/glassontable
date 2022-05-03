@@ -8,7 +8,7 @@ module.exports = {
         name: "allInfo",
         type: "input",
         message:
-          "For a table (3x3) and a glass placed at (1,1), and some commands (0-4), input 3,3,1,1,4,2,3,3,1,0 :",
+          "For a table (3x3) and a glass in the middle, plus some commands (0-4), input 3,3,1,1,4,3,1,0 :",
         validate: function (value) {
           if (value.length) {
             return true;
